@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.ssm.mapper.CategoryMapper">
+    <!--
+        查询 students 表中的数据
+    -->
+    <select id="queryAllCategory"  resultType="Category">
+        select * from category
+    </select>
+
+    <select id="queryAllCategoryId" parameterType="int" resultType="Venues">
+        select * from venues where cid=#{value}
+    </select>
+
+</mapper>
